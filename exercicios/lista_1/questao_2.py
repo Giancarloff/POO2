@@ -44,7 +44,14 @@ class Livro():
     def setVolume(self, volume):
         self.__volume = volume;
         
+class Biblioteca():
     
+    def __init__(self, livros = list()):
+        self.__livros = livros;
+
+    def pesquisar(self, term):
+        pass;
+
     
     
     
