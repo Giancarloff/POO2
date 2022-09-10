@@ -3,11 +3,8 @@ class Serie():
     class Fibonacci():
             
         def get(self, x):
-            
-            if (x == 0):
-                return 0;
         
-            if (x == 1):
+            if (x == 1 or x == 0):
                 return 1;
             
             return self.get(x-1) + self.get(x-2);
@@ -90,7 +87,7 @@ class Serie():
 s = Serie();
 print(s.Fatorial().get(10));
 print(s.Fatorial().upto(10));
-print(s.Fibonacci().get(8));
+print(s.Fibonacci().get(10));
 print(s.Fibonacci().upto(10));
 print(s.Fibonarial().upto(10));
 print(s.Primo().get(10));
