@@ -1,14 +1,14 @@
 class Serie():
     
     class Fibonacci():
-            
+          
         def get(self, x):
         
             if (x == 1 or x == 0):
                 return 1;
             
             return self.get(x-1) + self.get(x-2);
-            
+        
         def upto(self, x):
             
             tr = list();
