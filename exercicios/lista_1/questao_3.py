@@ -100,6 +100,8 @@ class Polinomio():
             
         else:
             
+            ponto = "◉";
+            
             y = list();
             for num in range(a, b+1): # pois range é [a, b)
                 y.append(self.avaliar(num));
@@ -109,8 +111,19 @@ class Polinomio():
             
             lx = len(list(range(a, b+1)));
             ly = len(list(range(menor, maior+1)));
+            print(ly);
+            print(y);
+            plano = list([["-"]*3*lx]*(ly+1));
             
-            plano = list([" "]*ly);
+            for num in y:
+                print(plano[num][0]);
+                plano[num][0] = num;
+                
+            for d in plano:
+                print(d);
+                
+            
+            
             
             
             
@@ -138,3 +151,5 @@ pt2 = Polinomio([1, 2, 3, 4]);
 print(pt.multiplicarPolinomio(pt2).getCoeficientes());
 
 print("_"*100);
+
+p.plota(0, 4);
