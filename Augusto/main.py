@@ -66,6 +66,9 @@ class App:
         return dict_user
 
     def make_user_id(self):
+        for u in self.__controller.get_all():
+            print(f"{u.get_id()} : {u.get_name()}")
+            
         id = int(input("ID: "))
         return id
 
@@ -99,7 +102,7 @@ class App:
                 self.delete_user(id)
             elif option == 4:
                 pass
-                form = self.make_user_form()
+                form = self.make_user_id()
                 self.update_user(form)
             else:
                 break
