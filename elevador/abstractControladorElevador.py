@@ -6,7 +6,7 @@ class AbstractControladorElevador(ABC):
     @abstractmethod
     def __init__(self):
         pass
-    
+
     '''
     Faz o elevador subir um andar. Se jah estiver no ultimo andar, dispara excecao
     @return Mensagem informando o que ocorreu com o elevador 
@@ -15,7 +15,7 @@ class AbstractControladorElevador(ABC):
     @abstractmethod
     def subir(self) -> str:
         pass
-    
+
     '''
     Faz o elevador descer um andar. Se jah estiver no terreo, dispara excecao
     @return Mensagem informando o que ocorreu com o elevador
@@ -33,23 +33,23 @@ class AbstractControladorElevador(ABC):
     @abstractmethod
     def entraPessoa(self) -> str:
         pass
-	
+
     '''
     Sai uma pessoa no Elevador. Se nao for possivel permitir a saida de uma pessoa, dispara excecao
     @return Mensagem informando o que ocorreu com o elevador
     @throws ElevadorJahVazioException
     '''
     @abstractmethod
-    def saiPessoa() -> str:
+    def saiPessoa(self) -> str:
         pass
-	
+
     '''
     @return Elevador
     '''
     @property
     @abstractmethod
     def elevador(self) -> Elevador:
-    	pass
+        pass
 
     '''
     @param andarAtual andar atual do elevador
